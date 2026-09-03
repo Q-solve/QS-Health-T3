@@ -1,4 +1,4 @@
-# Quantum-annealing molecular docking against CDK2
+# Quantum molecular docking against CDK2
 
 **Q-SOLVE Kenya 2026 · SDG 3 · Strathmore University, Nairobi**
 
