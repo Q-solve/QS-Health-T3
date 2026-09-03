@@ -1,0 +1,36 @@
+{
+  "device": "IQM Garnet (aws:iqm:qpu:garnet)",
+  "device_qubits": 20,
+  "job_id": "aws:iqm:qpu:garnet-09f9-qjob-6a990faae026787d1e5ad50b",
+  "submitted_via": "qBraid Composer",
+  "n_qubits_used": 12,
+  "problem": "CDK2 atom-to-node assignment QUBO, 3 anchor atoms x 4 pocket nodes",
+  "gates_total": 222,
+  "circuit_depth": 189,
+  "two_qubit_gates": 124,
+  "shots": 256,
+  "execution_ms": 3757,
+  "cost_credits": 67.12,
+  "cost_usd": 0.67,
+
+  "energy_exact_ground_state": -373.7957,
+  "ground_state_degeneracy": 1,
+  "energy_qaoa_simulator_best_256shots": -373.6862,
+  "energy_hardware_best_256shots": -373.6862,
+  "energy_hardware_mean": 295.44,
+  "energy_random_sampling_mean": 784.0,
+
+  "distinct_outcomes": 244,
+  "shots_exactly_at_ground_state": 0,
+  "prob_random_256_shots_would_hit_ground_state": 0.0606,
+
+  "bit_order_convention": "AWS Braket: leftmost character is qubit 0. Under the reversed convention the best sampled energy is -373.7957 with 1 shot at the exact ground state, but that single hit sits inside the 6.1% random-luck band, so the mean is the statistic to rely on.",
+
+  "headline": "On a real 20-qubit superconducting QPU the best of 256 shots reached -373.69, matching the noiseless simulator's best at the same shot count and within 0.03% of the certified ground state. The mean energy of +295 is far below the +784 expected from uniform random sampling, so the circuit carries real algorithmic signal despite 244 distinct outcomes in 256 shots.",
+
+  "honest_caveats": [
+    "244 distinct bitstrings from 256 shots means the output distribution is heavily noise-broadened; this is a NISQ-era result, not a clean one.",
+    "No shot landed exactly on the ground state under the Braket bit convention.",
+    "The reduced 12-qubit instance is 3 atoms x 4 nodes, not the full 54-variable docking QUBO."
+  ]
+}

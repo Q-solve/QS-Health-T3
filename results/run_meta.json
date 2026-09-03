@@ -1,0 +1,10 @@
+{
+  "n_ligands_scored": 294,
+  "n_preparation_failures": 6,
+  "n_molecules_read": 300,
+  "conformers_per_ligand": 6,
+  "poses_per_conformer": 48,
+  "hinge_weight": 0.0,
+  "seed": 2026,
+  "wall_seconds": 1515.4
+}
