@@ -1,0 +1,66 @@
+# Clean prompt, p10k-inspired layout
+
+format = """${custom.virtualenv}${custom.qbraid_host}$directory $git_branch$character"""
+
+right_format = """$python$cmd_duration"""
+
+# Show active virtualenv name on the left of the prompt as (env_name).
+# Mirrors the standard `source venv/bin/activate` behavior that starship
+# otherwise overrides. Falls back to nothing when no venv is active.
+#
+# qbraid envs use a `.qbraid/environments/<name>/pyenv` layout, so a naive
+# basename "$VIRTUAL_ENV" returns "pyenv" for every qbraid env. When that's
+# the case, walk up one directory to get the actual env name.
+[custom.virtualenv]
+when = '[ -n "$VIRTUAL_ENV" ]'
+command = 'd="$VIRTUAL_ENV"; [ "$(basename "$d")" = "pyenv" ] && d="$(dirname "$d")"; basename "$d"'
+format = '[(\($output\))](bold yellow) '
+shell = ["bash", "--noprofile", "--norc"]
+
+[directory]
+style = "bold cyan"
+truncation_length = 2
+truncate_to_repo = true
+
+[git_branch]
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[git_status]
+disabled = true
+
+[python]
+style = "yellow"
+format = '[$version(\($virtualenv\))]($style) '
+symbol = ""
+
+[cmd_duration]
+style = "yellow"
+min_time = 2_000
+format = "[$duration]($style)"
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+
+[nodejs]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[custom.qbraid_host]
+command = """
+_h=$(hostname)
+if [[ "$_h" == jupyter-*-40* ]]; then
+  _u="${_h#jupyter-}"; _u="${_u%%-40*}"
+else
+  _u="$_h"
+fi
+echo "${_u}@qbraid"
+"""
+when = "true"
+shell = ["bash", "--noprofile", "--norc"]
+style = "bold green"
+format = "[$output]($style):"

@@ -1,0 +1,40 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "INPUT=$(cat); echo \"$INPUT\" | sed 's/^{/{\"pid\":'$PPID',/' | qbraid agents register 2>/dev/null; true",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "INPUT=$(cat); echo \"$INPUT\" | sed 's/^{/{\"pid\":'$PPID',/' | qbraid agents deregister 2>/dev/null; true",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f \"/usr/local/lib/python3.12/dist-packages/qbraid_core/services/agents/permission_hook.py\" ] && /usr/bin/python \"/usr/local/lib/python3.12/dist-packages/qbraid_core/services/agents/permission_hook.py\" 2>/dev/null || true # qbraid-permission-hook",
+            "timeout": 35
+          }
+        ]
+      }
+    ]
+  }
+}

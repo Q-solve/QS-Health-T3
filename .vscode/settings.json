@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/.*": true
+    },
+    "workbench.startupEditor": "none"
+}

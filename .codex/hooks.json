@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "SID=\"${QBRAID_SESSION_ID:-}\"; echo '{\"tool_id\":\"codex\",\"pid\":'$PPID',\"cwd\":\"'$(pwd)'\"' | sed \"s/}$/$([ -n \\\"$SID\\\" ] && echo ',\\\"session_id\\\":\\\"'$SID'\\\"')/\" | sed \"s/$/}/\" | qbraid agents register 2>/dev/null; true",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"tool_id\":\"codex\",\"pid\":'$PPID'}' | qbraid agents deregister 2>/dev/null; true",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

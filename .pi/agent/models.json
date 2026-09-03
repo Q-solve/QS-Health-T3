@@ -1,0 +1,9 @@
+{
+  "providers": {
+    "qbraid": {
+      "baseUrl": "https://api-v2.qbraid.com/api/v1/ai",
+      "api": "openai-responses",
+      "apiKey": "!qbraid-agent-token"
+    }
+  }
+}
