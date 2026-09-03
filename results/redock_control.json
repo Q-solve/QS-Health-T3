@@ -1,0 +1,12 @@
+{
+  "crystal_pose_energy": -8.872,
+  "top1_energy": -9.787,
+  "top1_rmsd_angstrom": 0.492,
+  "best_rmsd_in_top_n": 0.492,
+  "rank_of_best_rmsd": 1,
+  "n_poses_sampled": 3000,
+  "n_refined": 40,
+  "rmsd_atoms": "heavy only",
+  "passes_2A_threshold": true,
+  "seed": 2026
+}

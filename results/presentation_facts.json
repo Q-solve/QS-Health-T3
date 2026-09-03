@@ -1,0 +1,254 @@
+{
+  "preparation": {
+    "receptor_atoms_united_atom": 2877,
+    "receptor_type_counts": {
+      "N": 384,
+      "C": 1326,
+      "OA": 414,
+      "SA": 8,
+      "HD": 511,
+      "A": 214,
+      "NA": 20
+    },
+    "receptor_net_charge": 5.878,
+    "atp_atoms_total": 39,
+    "atp_heavy_atoms": 31,
+    "grid_box_angstrom": 24.75,
+    "grid_spacing": 0.375,
+    "grid_points_per_map": 300763,
+    "grid_centre": [
+      100.541,
+      97.891,
+      81.717
+    ],
+    "maps_written": [
+      "A",
+      "Br",
+      "C",
+      "Cl",
+      "F",
+      "HD",
+      "I",
+      "N",
+      "NA",
+      "OA",
+      "P",
+      "S",
+      "SA",
+      "d",
+      "e"
+    ]
+  },
+  "redocking_control": {
+    "crystal_pose_energy": -8.872,
+    "top1_energy": -9.787,
+    "top1_rmsd_angstrom": 0.492,
+    "best_rmsd_in_top_n": 0.492,
+    "rank_of_best_rmsd": 1,
+    "n_poses_sampled": 3000,
+    "n_refined": 40,
+    "rmsd_atoms": "heavy only",
+    "passes_2A_threshold": true,
+    "seed": 2026
+  },
+  "screen": {
+    "n_ligands_ranked": 294,
+    "score_min": -7.154,
+    "score_median": -3.5625,
+    "score_max": 88.564,
+    "n_better_than_ATP": 0,
+    "pct_better_than_ATP": 0.0,
+    "top10": [
+      {
+        "Ligand_ID": "SANC00131",
+        "Score_kcal_mol": -7.154,
+        "Polar_contacts": 4,
+        "Hydrophobic_contacts": 12,
+        "Min_dist_to_hinge_A": 2.29
+      },
+      {
+        "Ligand_ID": "SANC00265",
+        "Score_kcal_mol": -6.727,
+        "Polar_contacts": 4,
+        "Hydrophobic_contacts": 7,
+        "Min_dist_to_hinge_A": 6.55
+      },
+      {
+        "Ligand_ID": "SANC00107",
+        "Score_kcal_mol": -6.32,
+        "Polar_contacts": 7,
+        "Hydrophobic_contacts": 15,
+        "Min_dist_to_hinge_A": 4.01
+      },
+      {
+        "Ligand_ID": "SANC00288",
+        "Score_kcal_mol": -6.198,
+        "Polar_contacts": 4,
+        "Hydrophobic_contacts": 15,
+        "Min_dist_to_hinge_A": 3.04
+      },
+      {
+        "Ligand_ID": "SANC00306",
+        "Score_kcal_mol": -6.041,
+        "Polar_contacts": 5,
+        "Hydrophobic_contacts": 8,
+        "Min_dist_to_hinge_A": 3.25
+      },
+      {
+        "Ligand_ID": "SANC00287",
+        "Score_kcal_mol": -5.995,
+        "Polar_contacts": 1,
+        "Hydrophobic_contacts": 12,
+        "Min_dist_to_hinge_A": 5.73
+      },
+      {
+        "Ligand_ID": "SANC00403",
+        "Score_kcal_mol": -5.939,
+        "Polar_contacts": 9,
+        "Hydrophobic_contacts": 10,
+        "Min_dist_to_hinge_A": 6.45
+      },
+      {
+        "Ligand_ID": "SANC00153",
+        "Score_kcal_mol": -5.836,
+        "Polar_contacts": 1,
+        "Hydrophobic_contacts": 9,
+        "Min_dist_to_hinge_A": 4.91
+      },
+      {
+        "Ligand_ID": "SANC00365",
+        "Score_kcal_mol": -5.766,
+        "Polar_contacts": 4,
+        "Hydrophobic_contacts": 8,
+        "Min_dist_to_hinge_A": 4.37
+      },
+      {
+        "Ligand_ID": "SANC00164",
+        "Score_kcal_mol": -5.765,
+        "Polar_contacts": 1,
+        "Hydrophobic_contacts": 10,
+        "Min_dist_to_hinge_A": 1.71
+      }
+    ],
+    "n_in_hinge_hbond_range": 59,
+    "top50_most_contacted_hydrophobic": [
+      [
+        "ILE10",
+        48
+      ],
+      [
+        "VAL18",
+        48
+      ],
+      [
+        "LEU134",
+        43
+      ],
+      [
+        "ALA144",
+        37
+      ],
+      [
+        "GLN131",
+        33
+      ],
+      [
+        "ALA31",
+        32
+      ],
+      [
+        "ASP145",
+        25
+      ],
+      [
+        "GLY11",
+        25
+      ],
+      [
+        "GLU12",
+        24
+      ],
+      [
+        "LYS33",
+        23
+      ]
+    ],
+    "top50_most_contacted_polar": [
+      [
+        "ASP145",
+        27
+      ],
+      [
+        "LYS33",
+        26
+      ],
+      [
+        "GLU12",
+        21
+      ],
+      [
+        "LYS89",
+        15
+      ],
+      [
+        "ASP86",
+        15
+      ],
+      [
+        "LEU83",
+        12
+      ],
+      [
+        "GLN131",
+        12
+      ],
+      [
+        "ASN132",
+        7
+      ],
+      [
+        "GLU81",
+        5
+      ],
+      [
+        "GLY13",
+        5
+      ]
+    ]
+  },
+  "run_meta": {
+    "n_ligands_scored": 294,
+    "n_preparation_failures": 6,
+    "n_molecules_read": 300,
+    "conformers_per_ligand": 6,
+    "poses_per_conformer": 48,
+    "hinge_weight": 0.0,
+    "seed": 2026,
+    "wall_seconds": 1515.4
+  },
+  "coupled_qubo": {
+    "n_instances": 25,
+    "n_vars": 54,
+    "n_geometry_couplings_median": 1022,
+    "coupling_density": 0.954,
+    "sa_strictly_better_than_greedy": 4,
+    "ties": 9,
+    "greedy_better": 12,
+    "mean_energy_left_on_table": 3.427250000000015,
+    "all_assignments_valid": true,
+    "median_sa_seconds": 0.3018
+  },
+  "vina_baseline": null,
+  "qaoa": {
+    "n_qubits": 12,
+    "circuit_depth": 64,
+    "qaoa_layers": 1,
+    "shots": 1024,
+    "energy_exact": -379.1628,
+    "energy_classical_annealing": -379.1628,
+    "energy_qaoa_simulator_best": -379.1628,
+    "energy_qaoa_simulator_mean": -63.0655,
+    "simulator_found_ground_state": true,
+    "geometry_couplings": 36
+  }
+}
