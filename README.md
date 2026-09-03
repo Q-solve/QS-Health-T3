@@ -15,7 +15,7 @@ and on real quantum hardware via QAOA.
 |---|---|
 | **ATP redocking control** (validation) | **0.49 Å** RMSD to the crystal pose — literature bar is 2.0 Å |
 | Crystal ATP interaction energy | −8.87 kcal/mol, 3.05 Å from the Leu83 hinge |
-| Compounds screened and ranked | 294 (6 preparation failures of 300) |
+| Compounds screened and ranked | 1012 |
 | Best hit | SANC00131, −7.15 kcal/mol, 2.29 Å from the hinge |
 | Coupled assignment QUBO | 54 variables, ~1,022 geometry couplings, density 0.95 |
 | **QAOA on IQM Garnet** (real 20-qubit QPU) | best of 256 shots **−373.686** vs exact **−373.796** |
